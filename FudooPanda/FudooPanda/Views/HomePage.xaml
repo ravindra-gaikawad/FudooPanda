@@ -3,6 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FudooPanda.Views.HomePage"
             Title="Home">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Name="searchBox" Order="Primary" Icon="search.png" Text="Search" Priority="0" />
+        <ToolbarItem Name="cart" Order="Primary" Icon="cart.png" Text="Cart" Priority="1" />
+    </TabbedPage.ToolbarItems>
   <!--Pages can be added as references or inline-->
     <ContentPage Title="Recommended">
         <StackLayout>

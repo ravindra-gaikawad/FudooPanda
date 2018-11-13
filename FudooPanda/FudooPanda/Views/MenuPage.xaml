@@ -22,11 +22,11 @@
                         <Label
                         Text="Ravindra Gaikawad"
                         FontAttributes="Bold" 
-                            FontSize="Medium"/>
+                            FontSize="16"/>
                         <Label
                         Text="ravigaikwad6294@gmail.com"
                         FontAttributes="None" 
-                         FontSize="Default"
+                         FontSize="12"
                             />
                     </StackLayout>
                 </Grid>
@@ -34,9 +34,22 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Padding="10">
-                            <Label Text="{Binding Title}" FontSize="20"/>
-                        </Grid>
+                        <StackLayout 
+                            Padding="15,10" 
+                            HorizontalOptions="FillAndExpand" 
+                            Orientation="Horizontal">
+                            <Image 
+                                Source="home.png" 
+                                WidthRequest="32" 
+                                HeightRequest="32" 
+                                Margin="2">                                
+                            </Image>
+                            <Label 
+                                VerticalOptions="FillAndExpand"
+                                VerticalTextAlignment="Center"
+                                Text="{Binding Title}" 
+                                FontSize="20"/>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
