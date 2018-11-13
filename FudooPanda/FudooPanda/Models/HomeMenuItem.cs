@@ -6,7 +6,11 @@ namespace FudooPanda.Models
 {
     public enum MenuItemType
     {
-        Browse,
+        Home,
+        MyOrders,
+        Wallet,
+        Settings,
+        Support,
         About
     }
     public class HomeMenuItem

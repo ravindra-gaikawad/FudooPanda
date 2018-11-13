@@ -18,7 +18,11 @@ namespace FudooPanda.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
+                new HomeMenuItem {Id = MenuItemType.Home, Title="Home"},
+                 new HomeMenuItem {Id = MenuItemType.MyOrders, Title="My Orders"},
+                new HomeMenuItem {Id = MenuItemType.Wallet, Title="Wallet" },
+                 new HomeMenuItem {Id = MenuItemType.Settings, Title="Settings"},
+                new HomeMenuItem {Id = MenuItemType.Support, Title="Support" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" }
             };
 

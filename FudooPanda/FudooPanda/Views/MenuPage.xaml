@@ -6,6 +6,31 @@
     <StackLayout VerticalOptions="FillAndExpand">
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
+            <ListView.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="9*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="1" Grid.Row="1">
+                        <Label
+                        Text="Ravindra Gaikawad"
+                        FontAttributes="Bold" 
+                            FontSize="Medium"/>
+                        <Label
+                        Text="ravigaikwad6294@gmail.com"
+                        FontAttributes="None" 
+                         FontSize="Default"
+                            />
+                    </StackLayout>
+                </Grid>
+            </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
