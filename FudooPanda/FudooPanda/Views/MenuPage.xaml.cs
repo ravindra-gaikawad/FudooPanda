@@ -18,12 +18,12 @@ namespace FudooPanda.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Home, Title="Home"},
-                 new HomeMenuItem {Id = MenuItemType.MyOrders, Title="My Orders"},
-                new HomeMenuItem {Id = MenuItemType.Wallet, Title="Wallet" },
-                 new HomeMenuItem {Id = MenuItemType.Settings, Title="Settings"},
-                new HomeMenuItem {Id = MenuItemType.Support, Title="Support" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new HomeMenuItem {Id = MenuItemType.Home, Title="Home", Icon="home.png"},
+                 new HomeMenuItem {Id = MenuItemType.MyOrders, Title="My Orders", Icon="order.png"},
+                new HomeMenuItem {Id = MenuItemType.Wallet, Title="Wallet", Icon="wallet.png"},
+                 new HomeMenuItem {Id = MenuItemType.Settings, Title="Settings", Icon="setting.png"},
+                new HomeMenuItem {Id = MenuItemType.Support, Title="Support", Icon="support.png"},
+                new HomeMenuItem {Id = MenuItemType.About, Title="About" , Icon="globe.png"}
             };
 
             ListViewMenu.ItemsSource = menuItems;

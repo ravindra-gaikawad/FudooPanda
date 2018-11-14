@@ -39,7 +39,7 @@
                             HorizontalOptions="FillAndExpand" 
                             Orientation="Horizontal">
                             <Image 
-                                Source="home.png" 
+                                Source="{Binding Icon}" 
                                 WidthRequest="32" 
                                 HeightRequest="32" 
                                 Margin="2">                                
