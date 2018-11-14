@@ -5,14 +5,14 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             Title="Home"
-            BarBackgroundColor="#2196F3"
+            BarBackgroundColor=" #FFBF00"
             BarTextColor="White">
     <TabbedPage.ToolbarItems>
         <ToolbarItem Name="searchBox" Order="Primary" Icon="search.png" Text="Search" Priority="0" />
         <ToolbarItem Name="cart" Order="Primary" Icon="cart.png" Text="Cart" Priority="1" />
     </TabbedPage.ToolbarItems>
   <!--Pages can be added as references or inline-->
-    <ContentPage Title="Recommended" Icon="search.png">
+    <ContentPage Title="Recommended" Icon="star.png">
         <StackLayout>
             <!-- Place new controls here -->
             <Label Text="Recommended!" 
@@ -20,7 +20,7 @@
                HorizontalOptions="Center" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Favourites" Icon="search.png">
+    <ContentPage Title="Favourites" Icon="favourite.png">
         <StackLayout>
             <!-- Place new controls here -->
             <Label Text="Favourites!" 
@@ -28,7 +28,7 @@
                HorizontalOptions="Center" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="All" Icon="search.png">
+    <ContentPage Title="All" Icon="all.png">
         <StackLayout>
             <!-- Place new controls here -->
             <Label Text="All!" 

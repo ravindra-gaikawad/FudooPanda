@@ -27,23 +27,47 @@ namespace FudooPanda.Views
                 switch (id)
                 {
                     case (int)MenuItemType.Home:
-                        MenuPages.Add(id, new NavigationPage(new HomePage()));
-                        break;
+                        {
+                            var page = new HomePage();
+                            page.Title = "Home";
+                            MenuPages.Add(id, new NavigationPage(page));
+                            break;
+                        }
                     case (int)MenuItemType.MyOrders:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
-                        break;
+                        {
+                            var page = new ItemsPage();
+                            page.Title = "My Orders";
+                            MenuPages.Add(id, new NavigationPage(page));
+                            break;
+                        }
                     case (int)MenuItemType.Wallet:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
-                        break;
+                        {
+                            var page = new ItemsPage();
+                            page.Title = "Wallet";
+                            MenuPages.Add(id, new NavigationPage(page));
+                            break;
+                        }
                     case (int)MenuItemType.Settings:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
-                        break;
+                        {
+                            var page = new ItemsPage();
+                            page.Title = "Settings";
+                            MenuPages.Add(id, new NavigationPage(page));
+                            break;
+                        }
                     case (int)MenuItemType.Support:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
-                        break;
+                        {
+                            var page = new ItemsPage();
+                            page.Title = "Support";
+                            MenuPages.Add(id, new NavigationPage(page));
+                            break;
+                        }
                     case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
-                        break;
+                        {
+                            var page = new ItemsPage();
+                            page.Title = "About";
+                            MenuPages.Add(id, new NavigationPage(page));
+                            break;
+                        }
                 }
             }
 
