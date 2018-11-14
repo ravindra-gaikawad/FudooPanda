@@ -4,16 +4,21 @@
              xmlns:views="clr-namespace:FudooPanda.Views"
              x:Class="FudooPanda.Views.HomePage"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:system="clr-namespace:System;assembly=netstandard"
             android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="#FFFFFF"
+            android:TabbedPage.BarSelectedItemColor="#A67C00"
             Title="Home"
-            BarBackgroundColor=" #FFBF00"
-            BarTextColor="White">
+            BarBackgroundColor=" #FFBF00">
     <TabbedPage.ToolbarItems>
         <ToolbarItem Name="searchBox" Order="Primary" Icon="search.png" Text="Search" Priority="0" />
         <ToolbarItem Name="cart" Order="Primary" Icon="cart.png" Text="Cart" Priority="1" />
     </TabbedPage.ToolbarItems>
   <!--Pages can be added as references or inline-->
     <ContentPage Title="Recommended" Icon="star.png">
+        <!--<ContentPage.Title>
+            <OnPlatform x:TypeArguments="system:String" Android=""/>
+        </ContentPage.Title>-->
         <StackLayout>
             <!-- Place new controls here -->
             <Label Text="Recommended!" 
@@ -22,6 +27,9 @@
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Favourites" Icon="favourite.png">
+        <!--<ContentPage.Title>
+            <OnPlatform x:TypeArguments="system:String" Android=""/>
+        </ContentPage.Title>-->
         <StackLayout>
             <!-- Place new controls here -->
             <Label Text="Favourites!" 
@@ -30,6 +38,9 @@
         </StackLayout>
     </ContentPage>
     <ContentPage Title="All" Icon="all.png">
+        <!--<ContentPage.Title>
+            <OnPlatform x:TypeArguments="system:String" Android=""/>
+        </ContentPage.Title>-->
         <StackLayout>
             <!-- Place new controls here -->
             <Label Text="All!" 
