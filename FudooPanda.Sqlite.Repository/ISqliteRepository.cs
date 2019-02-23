@@ -1,4 +1,4 @@
-﻿using FudooPanda.Sqlite.Entities;
+﻿using FudooPanda.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;

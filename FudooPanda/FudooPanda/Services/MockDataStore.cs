@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FudooPanda.Models;
-using FudooPanda.Sqlite.Entities;
+using FudooPanda.Core.Entities;
 
 namespace FudooPanda.Services
 {

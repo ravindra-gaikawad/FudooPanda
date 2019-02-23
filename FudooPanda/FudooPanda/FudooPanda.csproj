@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\FudooPanda.Sqlite.Repository\FudooPanda.Sqlite.Repository.csproj" />
-    <ProjectReference Include="..\..\FudooPanda.Sqlite\FudooPanda.Sqlite.csproj" />
   </ItemGroup>
 
   <ItemGroup>
