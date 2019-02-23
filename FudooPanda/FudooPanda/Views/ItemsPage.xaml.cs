@@ -11,6 +11,7 @@ using FudooPanda.Models;
 using FudooPanda.Views;
 using FudooPanda.ViewModels;
 using FudooPanda.Core.Entities;
+using FudooPanda.Core.Models;
 
 namespace FudooPanda.Views
 {

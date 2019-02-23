@@ -6,6 +6,7 @@ using Xamarin.Forms.Xaml;
 
 using FudooPanda.Models;
 using FudooPanda.Core.Entities;
+using FudooPanda.Core.Models;
 
 namespace FudooPanda.Views
 {

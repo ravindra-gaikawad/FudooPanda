@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FudooPanda.Core\FudooPanda.Core.csproj" />
+    <ProjectReference Include="..\FudooPanda.Sqlite.Repository\FudooPanda.Sqlite.Repository.csproj" />
   </ItemGroup>
 
 </Project>

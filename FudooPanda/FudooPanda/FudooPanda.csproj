@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -11,6 +11,8 @@
 
   <ItemGroup>
     <Compile Remove="Models\Item.cs" />
+    <Compile Remove="Services\IDataStore.cs" />
+    <Compile Remove="Services\MockDataStore.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,12 +20,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\FudooPanda.Sqlite.Repository\FudooPanda.Sqlite.Repository.csproj" />
+    <ProjectReference Include="..\..\FudooPanda.Services\FudooPanda.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Views\HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

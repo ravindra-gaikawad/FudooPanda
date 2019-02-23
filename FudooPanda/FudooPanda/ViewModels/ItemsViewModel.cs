@@ -9,6 +9,8 @@ using FudooPanda.Models;
 using FudooPanda.Views;
 using FudooPanda.Sqlite.Repository;
 using FudooPanda.Core.Entities;
+using FudooPanda.Core.Models;
+using FudooPanda.Services;
 
 namespace FudooPanda.ViewModels
 {
@@ -27,8 +29,8 @@ namespace FudooPanda.ViewModels
             {
                 var newItem = item as Item;
                 Items.Add(newItem);
-                ISqliteRepository sqliteRepository = new SqliteRepository();
-                await sqliteRepository.SaveAsync<Item>(newItem);
+                IItemService itemService = new ItemService();
+                await itemService.SaveAsync(newItem);
             });
         }
 
@@ -42,8 +44,8 @@ namespace FudooPanda.ViewModels
             try
             {
                 Items.Clear();
-                ISqliteRepository sqliteRepository = new SqliteRepository();
-                var items = await sqliteRepository.GetAsync<Item>();
+                IItemService itemService = new ItemService();
+                var items = await itemService.GetAsync();
                 foreach (var item in items)
                 {
                     Items.Add(item);

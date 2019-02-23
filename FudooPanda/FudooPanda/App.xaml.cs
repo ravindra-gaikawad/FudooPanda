@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using FudooPanda.Views;
-using FudooPanda.Sqlite.Repository;
+using FudooPanda.Services;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace FudooPanda
@@ -13,7 +13,8 @@ namespace FudooPanda
         public App()
         {
             InitializeComponent();
-            FudooDatabase.Init();
+            ICoreService coreService = new CoreService();
+            coreService.InitDatabase();
 
             MainPage = new MainPage();
         }

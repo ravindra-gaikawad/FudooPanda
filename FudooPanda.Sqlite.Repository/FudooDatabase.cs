@@ -16,7 +16,7 @@ namespace FudooPanda.Sqlite.Repository
         public static void Init()
         {
             SQLiteAsyncConnection sqliteAsyncConnection = GetAsyncConnection();
-            Type[] types = new Type[] { typeof(Product), typeof(Order), typeof(Item) };
+            Type[] types = new Type[] { typeof(Product), typeof(Order)};
             sqliteAsyncConnection.CreateTablesAsync(CreateFlags.None, types).Wait();
 
             //sqliteAsyncConnection.CreateTableAsync<Product>().Wait();
