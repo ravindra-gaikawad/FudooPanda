@@ -12,7 +12,7 @@ namespace FudooPanda
         public App()
         {
             InitializeComponent();
-
+            Sqlite.FudooDatabase.Init();
 
             MainPage = new MainPage();
         }
