@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 using FudooPanda.Models;
 using FudooPanda.Services;
+using FudooPanda.Sqlite.Entities;
 
 namespace FudooPanda.ViewModels
 {

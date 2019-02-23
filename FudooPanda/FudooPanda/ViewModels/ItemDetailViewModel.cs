@@ -1,6 +1,7 @@
 ﻿using System;
 
 using FudooPanda.Models;
+using FudooPanda.Sqlite.Entities;
 
 namespace FudooPanda.ViewModels
 {
