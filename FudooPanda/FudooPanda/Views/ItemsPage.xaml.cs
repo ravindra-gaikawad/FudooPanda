@@ -19,12 +19,15 @@ namespace FudooPanda.Views
     public partial class ItemsPage : ContentPage
     {
         ItemsViewModel viewModel;
+        private readonly ItemsViewModel itemsViewModel;
 
-        public ItemsPage()
+        public ItemsPage(ItemsViewModel itemsViewModel)
         {
             InitializeComponent();
+            this.itemsViewModel = itemsViewModel;
 
-            BindingContext = viewModel = new ItemsViewModel();
+            BindingContext = viewModel = this.itemsViewModel;
+            
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)

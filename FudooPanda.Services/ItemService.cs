@@ -10,9 +10,9 @@ namespace FudooPanda.Services
     {
         private readonly HttpService httpService;
 
-        public ItemService(/*HttpService httpService*/)
+        public ItemService(HttpService httpService)
         {
-            this.httpService = new HttpService();
+            this.httpService = httpService;
         }
 
         Task<List<Item>> IItemService.GetAsync()

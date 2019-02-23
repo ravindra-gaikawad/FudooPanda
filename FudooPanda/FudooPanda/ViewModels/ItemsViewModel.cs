@@ -16,10 +16,12 @@ namespace FudooPanda.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
+        private readonly IItemService itemService;
+
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
-        public ItemsViewModel()
+        public ItemsViewModel(IItemService itemService)
         {
             Title = "Browse";
             Items = new ObservableCollection<Item>();
@@ -29,9 +31,10 @@ namespace FudooPanda.ViewModels
             {
                 var newItem = item as Item;
                 Items.Add(newItem);
-                IItemService itemService = new ItemService();
+                //IItemService itemService = new ItemService();
                 await itemService.SaveAsync(newItem);
             });
+            this.itemService = itemService;
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -44,7 +47,7 @@ namespace FudooPanda.ViewModels
             try
             {
                 Items.Clear();
-                IItemService itemService = new ItemService();
+                //IItemService itemService = new ItemService();
                 var items = await itemService.GetAsync();
                 foreach (var item in items)
                 {

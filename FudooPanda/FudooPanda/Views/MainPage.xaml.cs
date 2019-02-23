@@ -1,4 +1,5 @@
-﻿using FudooPanda.Models;
+﻿using Autofac;
+using FudooPanda.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -34,38 +35,62 @@ namespace FudooPanda.Views
                             break;
                         }
                     case (int)MenuItemType.MyOrders:
-                        {
-                            var page = new ItemsPage();
-                            page.Title = "My Orders";
-                            MenuPages.Add(id, new NavigationPage(page));
+                        {                            
+                            ItemsPage itemsPage;
+                            using (var scope = App.Container.BeginLifetimeScope())
+                            {
+                                itemsPage = scope.Resolve<ItemsPage>();
+                                itemsPage.Title = "My Orders";
+                                MenuPages.Add(id, new NavigationPage(itemsPage));
+                            }
+                            
                             break;
                         }
                     case (int)MenuItemType.Wallet:
                         {
-                            var page = new ItemsPage();
-                            page.Title = "Wallet";
-                            MenuPages.Add(id, new NavigationPage(page));
+                            ItemsPage itemsPage;
+                            using (var scope = App.Container.BeginLifetimeScope())
+                            {
+                                itemsPage = scope.Resolve<ItemsPage>();
+                                itemsPage.Title = "Wallet";
+                                MenuPages.Add(id, new NavigationPage(itemsPage));
+                            }
                             break;
                         }
                     case (int)MenuItemType.Settings:
                         {
-                            var page = new ItemsPage();
-                            page.Title = "Settings";
-                            MenuPages.Add(id, new NavigationPage(page));
+                            ItemsPage itemsPage;
+                            using (var scope = App.Container.BeginLifetimeScope())
+                            {
+                                itemsPage = scope.Resolve<ItemsPage>();
+                                itemsPage.Title = "Wallet";
+                                MenuPages.Add(id, new NavigationPage(itemsPage));
+                            }
+
                             break;
                         }
                     case (int)MenuItemType.Support:
                         {
-                            var page = new ItemsPage();
-                            page.Title = "Support";
-                            MenuPages.Add(id, new NavigationPage(page));
+                            ItemsPage itemsPage;
+                            using (var scope = App.Container.BeginLifetimeScope())
+                            {
+                                itemsPage = scope.Resolve<ItemsPage>();
+                                itemsPage.Title = "Support";
+                                MenuPages.Add(id, new NavigationPage(itemsPage));
+                            }
+
                             break;
                         }
                     case (int)MenuItemType.About:
                         {
-                            var page = new ItemsPage();
-                            page.Title = "About";
-                            MenuPages.Add(id, new NavigationPage(page));
+                            ItemsPage itemsPage;
+                            using (var scope = App.Container.BeginLifetimeScope())
+                            {
+                                itemsPage = scope.Resolve<ItemsPage>();
+                                itemsPage.Title = "About";
+                                MenuPages.Add(id, new NavigationPage(itemsPage));
+                            }
+
                             break;
                         }
                 }

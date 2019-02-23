@@ -3,18 +3,26 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using FudooPanda.Views;
 using FudooPanda.Services;
+using Autofac;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace FudooPanda
 {
     public partial class App : Application
     {
+        // IContainer and ContainerBuilder are provided by Autofac
+        public static IContainer Container { get; set; }
 
         public App()
         {
             InitializeComponent();
             ICoreService coreService = new CoreService();
             coreService.InitDatabase();
+
+            var builder = new ContainerBuilder();
+            ComponentRegistrar.PrePopulationRegistration(builder);
+            ComponentRegistrar.PostPopulationRegistration(builder);
+            Container = builder.Build();
 
             MainPage = new MainPage();
         }
