@@ -6,5 +6,9 @@ namespace FudooPanda.Services
 {
     public class OrderService : IOrderService
     {
+        public OrderService()
+        {
+
+        }
     }
 }

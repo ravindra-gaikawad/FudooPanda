@@ -8,9 +8,9 @@ namespace FudooPanda.Services
 {
     public class ItemService : IItemService
     {
-        private readonly HttpService httpService;
+        private readonly IHttpService httpService;
 
-        public ItemService(HttpService httpService)
+        public ItemService(IHttpService httpService)
         {
             this.httpService = httpService;
         }

@@ -10,6 +10,11 @@ namespace FudooPanda.Services
 {
     public class HttpService : IHttpService
     {
+        public HttpService()
+        {
+
+        }
+
         async Task<ResponseModel> IHttpService.Post<T>(string relativeUrl, T model)
         {
             using (HttpClient httpClient = GetHttpClient())
